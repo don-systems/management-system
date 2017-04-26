@@ -8,11 +8,6 @@ from openerp import models, fields
 class MgmtsystemAction(models.Model):
     _inherit = "mgmtsystem.action"
 
-    nonconformity_immediate_id = fields.One2many(
-        'mgmtsystem.nonconformity',
-        'immediate_action_id',
-        readonly=True,
-    )
     nonconformity_ids = fields.Many2many(
         'mgmtsystem.nonconformity',
         'mgmtsystem_nonconformity_action_rel',
